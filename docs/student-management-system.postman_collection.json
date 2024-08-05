@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "128871db-c61e-463c-b550-8dec86d70ea6",
+		"name": "student-management-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28391772"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"siddheshpawar95@gmail.com\",\r\n    \"password\" : \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"siddheshpawar95@gmail.com\",\r\n     \"password\" : \"123456789\",\r\n     \"roles\" : [\"student\",\"admin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "allRegisteredUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subject",
+			"item": [
+				{
+					"name": "createSubjects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0Iiwic3ViIjoic2lkZGhlc2hwYXdhcjk1QGdtYWlsLmNvbSIsImlhdCI6MTcyMjg1ODc0NywiZXhwIjoxNzIyODYwNTQ3fQ.FOfwce1EzmIgWZ9_4J5jfbLWDDDcur3XRhFj8P5Ovzg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Mathematics\"\r\n    },\r\n    {\r\n        \"name\": \"Physics\"\r\n    },\r\n    {\r\n        \"name\": \"Chemistry\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/subject/createSubjects"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSubjects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0Iiwic3ViIjoic2lkZGhlc2hwYXdhcjk1QGdtYWlsLmNvbSIsImlhdCI6MTcyMjg1ODc0NywiZXhwIjoxNzIyODYwNTQ3fQ.FOfwce1EzmIgWZ9_4J5jfbLWDDDcur3XRhFj8P5Ovzg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/subject/getAllSubjects"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "createStudent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0Iiwic3ViIjoic2lkZGhlc2hwYXdhcjk1QGdtYWlsLmNvbSIsImlhdCI6MTcyMjg1ODc0NywiZXhwIjoxNzIyODYwNTQ3fQ.FOfwce1EzmIgWZ9_4J5jfbLWDDDcur3XRhFj8P5Ovzg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"johndoe@email.com\",\r\n    \"address\": \"123 Main St\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/subject/createStudent"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllStudents",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0Iiwic3ViIjoic2lkZGhlc2hwYXdhcjk1QGdtYWlsLmNvbSIsImlhdCI6MTcyMjg1ODc0NywiZXhwIjoxNzIyODYwNTQ3fQ.FOfwce1EzmIgWZ9_4J5jfbLWDDDcur3XRhFj8P5Ovzg"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/subject/getAllStudents"
+					},
+					"response": []
+				},
+				{
+					"name": "assignSubjectsToStudentById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0Iiwic3ViIjoic2lkZGhlc2hwYXdhcjk1QGdtYWlsLmNvbSIsImlhdCI6MTcyMjg1ODc0NywiZXhwIjoxNzIyODYwNTQ3fQ.FOfwce1EzmIgWZ9_4J5jfbLWDDDcur3XRhFj8P5Ovzg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    \"Mathematics\" ,\"Physics\" ,\"Chemistry\"\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/subject/assignSubjectsToStudentById/1"
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/test/welcome"
+			},
+			"response": []
+		}
+	]
+}
