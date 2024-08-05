@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/43794721/spring-boot-h2-console-throws-403-with-spring-security-1-5-2
+
+https://stackoverflow.com/questions/53395200/h2-console-is-not-showing-in-browser
+
+https://stackoverflow.com/questions/59668487/org-hibernate-tool-schema-spi-commandacceptanceexception-error-executing-ddl
+
+https://stackoverflow.com/questions/67098514/java-error-release-version-17-not-supported
