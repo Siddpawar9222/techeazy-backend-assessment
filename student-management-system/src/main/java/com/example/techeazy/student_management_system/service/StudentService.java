@@ -54,6 +54,7 @@ public class StudentService {
             response.setData(saveStudent);
             response.setResultCode(201);
         }catch (Exception e){
+            e.printStackTrace();
             LOG.error("Error while creating student : {}", e.getMessage());
             e.printStackTrace();
             throw new CaughtException(e.getMessage());

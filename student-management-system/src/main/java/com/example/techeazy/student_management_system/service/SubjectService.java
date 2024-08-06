@@ -92,6 +92,7 @@ public class SubjectService {
             response.setMessage("Subjects created successfully");
             response.setResultCode(201);
         }catch (Exception e){
+            e.printStackTrace();
             LOG.error("Error while creating subjects : {}", e.getMessage());
             throw new CaughtException(e.getMessage());
         }
@@ -115,6 +116,7 @@ public class SubjectService {
             response.setMessage("Subjects fetched successfully");
             response.setResultCode(200);
         }catch (Exception e){
+            e.printStackTrace();
             LOG.error("Error while fetching subjects : {}", e.getMessage());
             throw new CaughtException(e.getMessage());
         }

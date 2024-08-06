@@ -46,9 +46,9 @@ public class StudentRestController {
         try {
             return Long.parseLong(id);
         }catch (Exception e){
+             e.printStackTrace();
              throw  new BadRequestException(e.getMessage());
         }
-
     }
 
 

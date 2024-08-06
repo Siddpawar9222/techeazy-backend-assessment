@@ -120,8 +120,10 @@ public class AuthService {
                 throw new UsernameNotFoundException("Invalid user request !");
             }
         } catch (AuthenticationException e) {
+            e.printStackTrace();
             throw new LoginException("Authentication failed: " + e.getMessage());
         }catch (Exception e) {
+            e.printStackTrace();
             throw new CaughtException("Error while authenticating user : " + e.getMessage());
         }
         LOG.info("authenticateAndGetToken service has ended ::: {} ",new Date());
