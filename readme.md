@@ -7,7 +7,7 @@ A Spring Boot application for managing students and their subjects.
 Ensure you system have met the following requirements:
 
 - Java Development Kit (JDK) 21
-- Maven 3.6.3 or higher (Optional)
+- Maven 3.6.3 or higher (Optional if you are running project only in IDE. If you want to run it command line then it is neccessary.)
 
 ## Installation
 
@@ -23,7 +23,7 @@ Ensure you system have met the following requirements:
      cd student-management-system
    ```
 
-3. **Open Project in your favourite IDE(I use Intellij)**
+3. **Open Project in your favourite IDE (I use Intellij).**
 
 ## Running the Application
 
@@ -71,6 +71,7 @@ To properly interact with the API, follow this sequence:
 2. **Subject API**:
 
    - Execute the `createSubjects` endpoint to create new subjects.
+   - Execute the `getAllSubjects` endpoint to create get all subjects.
 
 3. **Student API**:
    - Execute the `createStudent` endpoint to create a new student.
@@ -94,6 +95,7 @@ I encountered some doubts related to understanding and implementing the project:
 
    - The project does not use Spring MVC for view rendering, so page redirection is not possible.
    - Instead, I created REST APIs and tested them using Postman.
+   - I have created controller as well but it is commented right now.
 
 2. **Roles**:
    - Currently, I have assigned all authorities to both the `student` and `admin` roles.

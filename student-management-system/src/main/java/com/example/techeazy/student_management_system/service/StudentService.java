@@ -2,6 +2,7 @@ package com.example.techeazy.student_management_system.service;
 
 import com.example.techeazy.student_management_system.dto.StudentDto;
 import com.example.techeazy.student_management_system.exception.CaughtException;
+import com.example.techeazy.student_management_system.exception.UsernameAlreadyExistException;
 import com.example.techeazy.student_management_system.mapper.StudentMapper;
 import com.example.techeazy.student_management_system.model.*;
 import com.example.techeazy.student_management_system.repository.RoleRepository;
@@ -41,6 +42,11 @@ public class StudentService {
         Response response = new Response();
 
         try{
+            boolean isExists = studentRepository.existsByUsername(studentDto.getEmail());
+            if(isExists){
+                throw new UsernameAlreadyExistException("Email already exist, use different one");
+            }
+
             Student student = StudentMapper.mapToStudent(studentDto);
             Student saveStudent = studentRepository.save(student);
 

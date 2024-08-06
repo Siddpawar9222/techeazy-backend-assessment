@@ -3,6 +3,7 @@ package com.example.techeazy.student_management_system.service;
 
 import com.example.techeazy.student_management_system.dto.UserDto;
 import com.example.techeazy.student_management_system.exception.*;
+import com.example.techeazy.student_management_system.mapper.UserMapper;
 import com.example.techeazy.student_management_system.model.ERole;
 import com.example.techeazy.student_management_system.model.Response;
 import com.example.techeazy.student_management_system.model.Role;
@@ -90,7 +91,7 @@ public class AuthService {
         user.setRoles(role);
         User save = userRepository.save(user);
 
-        UserDto savedUserDto = new UserDto(save.getId(), save.getUsername(), "************", roleList);
+        UserDto savedUserDto = UserMapper.mapUserToUserDto(save);
 
         Response response = new Response();
 
